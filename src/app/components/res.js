@@ -51,29 +51,29 @@ export class res extends React.Component {
                   </div>
                   <div className="col-sm-6">
                     <p>
+                      {' '}
+                      <b>Cuisines </b>
+                      {' '}
+                      :
                           {' '}
-                          <b>Cuisines </b>
-                          {' '}
-:
-                          {' '}
-                          {this.state.data.cuisines}
-                        </p>
+                      {this.state.data.cuisines}
+                    </p>
                     <p>
+                      {' '}
+                      <b>Restraunt Id </b>
+                      {' '}
+                      :
                           {' '}
-                          <b>Restraunt Id </b>
-                          {' '}
-:
-                          {' '}
-                          {this.state.data.id}
-                        </p>
+                      {this.state.data.id}
+                    </p>
                     <p>
+                      {' '}
+                      <b>average cost for two </b>
+                      {' '}
+                      :
                           {' '}
-                          <b>average cost for two </b>
-                          {' '}
-:
-                          {' '}
-                          {this.state.data.average_cost_for_two}
-                        </p>
+                      {this.state.data.average_cost_for_two}
+                    </p>
                     <a href={this.state.data.url} className="btn btn-primary"> Go to website </a>
                   </div>
                 </div>
@@ -88,5 +88,5 @@ export class res extends React.Component {
 
 
 res.propTypes = {
-  match : PropTypes.object
+  match: PropTypes.object
 }
