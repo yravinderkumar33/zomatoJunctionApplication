@@ -1,5 +1,6 @@
 /*global XMLHttpRequest alert document localStorage:true*/
 /*eslint no-undef: "error"*/
+/*eslint func-names: ["error", "never"]*/
 
 import React from 'react';
 import { Header } from './components/header';
@@ -53,7 +54,7 @@ export class Container extends React.Component {
 					c = categories.map(function (element) {
 						return element.categories.name;
 					});
-					console.log(c);
+					// console.log(c);
 				} else {
 					console.error("not ok");
 				}
@@ -79,7 +80,7 @@ export class Container extends React.Component {
 
 		let xmlHttp = new XMLHttpRequest();
 		let c = null;
-		console.log(this)
+		// console.log(this)
 		xmlHttp.open("GET", "https://developers.zomato.com/api/v2.1/collections?city_id=" + select, true);
 		xmlHttp.setRequestHeader("user-key", this.state.key);
 		xmlHttp.setRequestHeader("Accept", "application/json");
@@ -95,7 +96,7 @@ export class Container extends React.Component {
 						}
 						return obj;
 					});
-					console.log(c);
+					// console.log(c);
 				} else {
 					console.error("not ok");
 				}
@@ -108,7 +109,7 @@ export class Container extends React.Component {
 			}
 			)
 
-			console.log(this.state.collection);
+			// console.log(this.state.collection);
 
 			this.getResultByKeywords();
 		}
@@ -133,7 +134,7 @@ export class Container extends React.Component {
 						var newObj = { id: element.id, city: element.name };
 						return newObj;
 					});
-					console.log(c);
+					// console.log(c);
 				} else {
 					console.error("not ok");
 				}
@@ -146,8 +147,8 @@ export class Container extends React.Component {
 				showResult: !newState
 			}
 			)
-			console.log(typeof select);
-			console.log(this.state.currentCity[0].id);
+			// console.log(typeof select);
+			// console.log(this.state.currentCity[0].id);
 
 			this.getCollections(this.state.currentCity[0].id);
 
@@ -193,7 +194,7 @@ export class Container extends React.Component {
 	// function to search by keyword starts here
 
 	getResultByKeywords() {
-		console.log("entered into get details by keyword function")
+		// console.log("entered into get details by keyword function")
 		let xmlHttp = new XMLHttpRequest();
 		let c = null;
 		xmlHttp.open("GET", "https://developers.zomato.com/api/v2.1/search?entity_id=" + this.state.currentCity[0].id + "&entity_type=city&q=" + document.getElementById("keyword").value, true);
@@ -248,7 +249,7 @@ export class Container extends React.Component {
 
 	// function ends here
 	addToExistingCat(res, category) {
-		console.log(res + "clicked on " + category);
+		// console.log(res + "clicked on " + category);
 
 		var n = Object.assign(this.state.userDefinedCategories);
 		var a = n.findIndex(function (element) {
@@ -285,10 +286,10 @@ export class Container extends React.Component {
 		if (typeof (Storage) !== "undefined") {
 			if (!localStorage.categories) {
 				localStorage.setItem("categories", JSON.stringify(this.state.userDefinedCategories));
-				console.log(localStorage.getItem("categories"));
+				// console.log(localStorage.getItem("categories"));
 			}
 		} else {
-			console.log(localStorage.getItem("categories"));
+			// console.log(localStorage.getItem("categories"));
 		}
 		return (
 			<div>
