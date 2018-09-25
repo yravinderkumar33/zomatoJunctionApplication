@@ -1,0 +1,7 @@
+yarn run v1.9.4
+$ webpack-dev-server
+[34mℹ[39m [90m｢wds｣[39m: Project is running at [1m[34mhttp://localhost:8080/[39m[22m
+[34mℹ[39m [90m｢wds｣[39m: webpack output is served from [1m[34m/[39m[22m
+[34mℹ[39m [90m｢wds｣[39m: Content not from webpack is served from [1m[34m/home/niit/stackroute/week4/react-basic-template/public[39m[22m
+[34mℹ[39m [90m｢wds｣[39m: 404s will fallback to [1m[34m/index.html[39m[22m
+[34mℹ[39m [90m｢wdm｣[39m: Failed to compile.
